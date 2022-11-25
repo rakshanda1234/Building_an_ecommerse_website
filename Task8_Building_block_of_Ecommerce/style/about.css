@@ -48,6 +48,39 @@ header h1 {
   font-size: 100px;
 }
 
+.section-header {
+  font-family: "Metal Mania";
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+h2 {
+  display: block;
+  font-weight: bold;
+}
+.about-band-img {
+  float: left;
+  margin: 15px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+p {
+  display: block;
+}
+#about {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 22px;
+}
+#about p {
+  font-size: 17px;
+  margin: 20px;
+  color: #777;
+}
+
 footer {
   display: flex;
   margin-top: 40px;
@@ -60,6 +93,21 @@ footer .footer-title {
   width: 50%;
   font-size: 50px;
   font-weight: bold;
+}
+footer .footer-icon {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer-icon ul {
+  list-style-type: none;
+  flex: grow 1;
+  text-align: end;
+}
+footer-icon img {
+  width: 30px;
+  height: 30px;
 }
 div {
   display: block;
