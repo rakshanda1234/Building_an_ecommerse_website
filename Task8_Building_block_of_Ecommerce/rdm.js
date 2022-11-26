@@ -24,7 +24,7 @@ const parentContainer = document.getElementById("EcommerceContainer");
 parentContainer.addEventListener("click", (e) => {
   if (e.target.className == "shop-item-button") {
     const id = e.target.parentNode.parentNode.id;
-    const imageSrc = document.querySelector(`#${id} image`).src;
+    const imageSrc = document.querySelector(`#${id}img`).src;
     const title = document.querySelector(`#${id}h3`).innerText;
     const price =
       e.target.parentNode.firstElementChild.firstElementChild.innerText;
@@ -98,22 +98,22 @@ height="100">
   //     //   document.querySelector("#total-value").innerText = `0`;
   //   }
 
-  if ((e.target.innerText = "REMOVE")) {
-    let total_cart_price = document.querySelector("#total-value").innerText;
-    total_cart_price =
-      parseFloat(total_cart_price).toFixed(2) -
-      parseFloat(
-        document.querySelector(
-          `${e.target.parentNode.parentNode.id}.cart-price`
-        ).innerText
-      ).toFixed(2);
-    document.querySelector(".cart-number").innerText =
-      parseInt(document.querySelector(".cart-number").innerText) - 1;
-    document.querySelector(
-      "#total-value"
-    ).innerText = `${total_cart_price.toFixed(2)}`;
-    e.target.parentNode.parentNode.remove();
-  }
+  //   if ((e.target.innerText = "REMOVE")) {
+  //     let total_cart_price = document.querySelector("#total-value").innerText;
+  //     total_cart_price =
+  //       parseFloat(total_cart_price).toFixed(2) -
+  //       parseFloat(
+  //         document.querySelector(
+  //           `${e.target.parentNode.parentNode.id}.cart-price`
+  //         ).innerText
+  //       ).toFixed(2);
+  //     document.querySelector(".cart-number").innerText =
+  //       parseInt(document.querySelector(".cart-number").innerText) - 1;
+  //     document.querySelector(
+  //       "#total-value"
+  //     ).innerText = `${total_cart_price.toFixed(2)}`;
+  //     e.target.parentNode.parentNode.remove();
+  //   }
 });
 // var removeCartItemButtons = document.getElementsByClassName("btn-danger");
 // console.log(removeCartItemButtons);
