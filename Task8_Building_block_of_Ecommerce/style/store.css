@@ -104,6 +104,10 @@ img {
   height: 100%;
   width: 100%;
 }
+.shop-images:hover {
+  transform: scale(1.5);
+  filter: brightness(130%);
+}
 #music-content .shop-details {
   display: flex;
   margin: 8px;
@@ -114,7 +118,6 @@ img {
   flex-grow: 1;
   color: #333;
 }
-
 #music-content .shop-item-button {
   cursor: pointer;
   padding: 8px;
@@ -125,7 +128,8 @@ img {
   border-radius: 4%;
   background: cadetblue;
 }
-#music-content .shop-item-button :hover {
+#music-content .shop-item-button :hover,
+#merch-content .shop-item-button:hover {
   background: rgb(20, 102, 243);
 }
 .shop-images {
@@ -189,6 +193,35 @@ img {
   border-radius: 4%;
   background: cadetblue;
 }
+.cart-holder {
+  border: 2px solid cadetblue;
+  border-radius: 7px;
+  padding: 2px 10px;
+  position: absolute;
+  right: 2%;
+}
+.cart-number {
+  position: absolute;
+  color: cadetblue;
+  font-size: 20px;
+  top: -10px;
+  right: -15px;
+}
+#cart {
+  margin: 0px;
+  display: none;
+  position: fixed;
+  top: 50px;
+  height: 95%;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(177, 103, 103);
+  min-height: 50vh;
+}
+#cart h2 {
+  margin: 20px 0px;
+  padding: 0;
+}
 .cart-row {
   font-size: 18px;
   display: flex;
@@ -212,8 +245,6 @@ img {
 }
 .cart-price {
   width: 20%;
-  font-size: 1.2em;
-  color: #333;
 }
 .cart-quantity {
   width: 35%;
@@ -226,7 +257,7 @@ img {
   padding-bottom: 10px;
   margin-top: 10px;
 }
-.cart-quantity-input {
+.cart-quantity input {
   height: 34px;
   width: 50px;
   border-radius: 5px;
@@ -263,6 +294,10 @@ img {
   margin-left: 0.5em;
   font-size: 1.2em;
 }
+.cart-total .total-title {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
 
 .cart-item-image {
   width: 75px;
@@ -289,19 +324,6 @@ img {
 
 .cart-row:last-child .cart-column {
   border: none;
-}
-
-.cart-total {
-  text-align: end;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-.cart-total-title {
-  font-weight: bold;
-  font-size: 1.5em;
-  /* color: black; */
-  margin-right: 20px;
 }
 
 .cart-total-price {
@@ -367,4 +389,20 @@ footer-icon img {
 }
 div {
   display: block;
+}
+
+#container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.notification {
+  background-color: cadetblue;
+  border-radius: 5px;
+  color: black;
+  padding: 2rem;
+  margin: 1rem;
+}
+notification h4 span {
+  color: red;
 }

@@ -1,23 +1,3 @@
-// img effect
-// const music = document.getElementById("music");
-// const img = document.querySelector("img");
-
-// music.addEventListener("mousemove", (e) => {
-//   const x = e.clientX - e.target.offsetLeft;
-//   const y = e.clientY - e.target.offsetTop;
-
-//   img.style.transformOrigin = `${x}px ${y}px`;
-//   img.style.transform = "scale(2)";
-// });
-
-// music.addEventListener("mouseleave", () => {
-//   img.style.transformOrigin = "center center";
-//   img.style.transform = "scale(1)";
-// });
-
-const cart_items = document.querySelector("#cart.cart-items");
-
-//add to cart
 var addToCartButtons = document.getElementsByClassName("shop-item-button");
 for (var i = 0; i < addToCartButtons.length; i++) {
   var button = addToCartButtons[i];
@@ -35,6 +15,7 @@ function addToCartClicked(event) {
 }
 
 function addItemToCart(title, price, imageSrc) {
+  //   const WhichbuttonclickedID = event.target.id;
   var cartRow = document.createElement("div");
   cartRow.classList.add("cart-row");
   var cartItems = document.getElementsByClassName("cart-items")[0];
@@ -48,36 +29,15 @@ height="100">
 <input class="cart-quantity-input" type="number" value="1">
 <button class="btn btn-danger" type="button">REMOVE</button>
   </div>`;
-
   cartRow.innerHTML = cartRowContents;
   cartItems.append(cartRow);
-  cartItems.appendChild(cartRow);
+  //   alert(`product "${title}" is successfully added to cart`);
   const container = document.getElementById("container");
   const notification = document.createElement("div");
   notification.classList.add("notification");
-  notification.innerHTML = `<h4>Your Product:<span>${title}</span>is added to the cart</h4>`;
+  notification.innerHTML = `<h4>Your Product : <span>${name}</span> is added to the cart<h4>`;
   container.appendChild(notification);
   setTimeout(() => {
     notification.remove();
   }, 2500);
 }
-if (
-  e.target.className == "cart-btn-bottom" ||
-  e.target.className == "cart-bottom" ||
-  e.target.className == "cart-holder"
-) {
-  document.querySelector("#cart").style = "display:block;";
-}
-if (e.target.className == "cancel") {
-  document.querySelector("#cart").style = "display:none;";
-}
-
-// var removeCartItemButtons = document.getElementsByClassName("btn-danger");
-// console.log(removeCartItemButtons);
-// for (var i = 0; i < removeCartItemButtons.length; i++) {
-//   var button = removeCartItemButtons[i];
-//   button.addEventListener("click", function (event) {
-//     var buttonClicked = event.target;
-//     buttonClicked.parentElement.parentElement.remove();
-//   });
-// }
