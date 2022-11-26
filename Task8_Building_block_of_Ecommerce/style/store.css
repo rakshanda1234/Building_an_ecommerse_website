@@ -66,6 +66,20 @@ header h1 {
   margin: 0 auto;
   padding: 20px 30px;
 }
+.cancel {
+  position: absolute;
+  cursor: pointer;
+  color: rgb(121, 117, 117);
+  top: 0;
+  right: 0;
+  margin: 20px;
+  background: none;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid rgb(121, 117, 117);
+  border-radius: 7px;
+  padding: 5px;
+}
 section {
   display: block;
 }
